@@ -1,0 +1,29 @@
+{% load static %}
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block page_title %}{% endblock %} | Dollar </title>
+    <link rel="stylesheet" type="text/css" href={% static "login/login.css" %}>
+    {% block extra_style %}{% endblock %}
+</head>
+
+<body class="body-bg">
+
+
+<div id="preloader">
+    <div class="loader"></div>
+</div>
+
+
+{% block render_body %}{% endblock %}
+
+{% block extra_script %}{% endblock %}
+</body>
+
+</html>
+
+
