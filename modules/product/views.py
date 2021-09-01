@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .models import Product
+from .forms import ProductForm
 
-# Create your views here.
+
+def ProductList(request):
+    p = Product.objects.all()
+    return render(request, "product/product-update.html", {'p': p})
